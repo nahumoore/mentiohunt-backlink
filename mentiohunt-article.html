@@ -86,10 +86,7 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-      gap: 40px;
-      align-items: center;
+      max-width: 860px;
       margin-bottom: 56px;
     }
 
@@ -152,50 +149,6 @@
       text-decoration: none;
     }
 
-    .queue-card {
-      position: relative;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: rgba(255, 253, 248, 0.88);
-      box-shadow: 0 30px 80px rgba(64, 48, 31, 0.14);
-      backdrop-filter: blur(14px);
-    }
-
-    .queue-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .score {
-      display: grid;
-      width: 74px;
-      height: 74px;
-      place-items: center;
-      border-radius: 24px;
-      color: white;
-      background: var(--green);
-      font-size: 1.5rem;
-      font-weight: 900;
-      line-height: 1;
-    }
-
-    .opportunity {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: white;
-    }
-
-    .opportunity + .opportunity {
-      margin-top: 12px;
-    }
-
     .tag {
       display: inline-flex;
       margin-bottom: 10px;
@@ -207,11 +160,6 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-    }
-
-    .opportunity p {
-      margin: 0;
-      color: var(--muted);
     }
 
     .article-shell {
@@ -340,7 +288,6 @@
     }
 
     @media (max-width: 860px) {
-      .hero,
       .article-shell,
       .grid {
         grid-template-columns: 1fr;
@@ -369,7 +316,6 @@
         display: none;
       }
 
-      .queue-card,
       article,
       .closing {
         border-radius: 24px;
@@ -392,32 +338,13 @@
     </nav>
 
     <header class="hero">
-      <div>
-        <span class="eyebrow">Founder distribution</span>
-        <h1>Why Mentiohunt is the best way for founders to get backlinks and community mentions</h1>
-        <p class="lede">Founders do not need another dashboard full of vague SEO metrics. They need a daily distribution queue that tells them where to show up, why the opportunity matters, and what to say next.</p>
-        <div class="hero-actions">
-          <a class="button" href="https://mentiohunt.com/signup">Build your backlink queue</a>
-          <a class="secondary-link" href="https://mentiohunt.com/#how-it-works">See how it works</a>
-        </div>
+      <span class="eyebrow">Founder distribution</span>
+      <h1>Why Mentiohunt is the best way for founders to get backlinks and community mentions</h1>
+      <p class="lede">Founders do not need another dashboard full of vague SEO metrics. They need a daily distribution queue that tells them where to show up, why the opportunity matters, and what to say next.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://mentiohunt.com/signup">Build your backlink queue</a>
+        <a class="secondary-link" href="https://mentiohunt.com/#how-it-works">See how it works</a>
       </div>
-
-      <aside class="queue-card" aria-label="Mentiohunt opportunity example">
-        <div class="queue-top">
-          <span>Today's best opportunity</span>
-          <span class="score">92</span>
-        </div>
-        <div class="opportunity">
-          <span class="tag">Backlink</span>
-          <h3>Pitch a founder tools resource page</h3>
-          <p>Mentiohunt identifies a relevant page, explains the fit, and drafts the outreach angle so the founder can review and send.</p>
-        </div>
-        <div class="opportunity">
-          <span class="tag">Community mention</span>
-          <h3>Reply to a high-fit Reddit thread</h3>
-          <p>When a live conversation matches the product, Mentiohunt surfaces it quickly with a suggested reply.</p>
-        </div>
-      </aside>
     </header>
 
     <div class="article-shell">
